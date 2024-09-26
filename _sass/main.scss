@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+$pink: #ff8080;
+$pink-invert: #fff;
+
+$primary: $pink;
+$primary-invert: $pink-invert;
+
+
+@import "../node_modules/bulma/bulma";
+
+#tabs-with-content .tabs:not(:last-child) {
+  margin-bottom: 0;
+}
+
+#tabs-with-content .tab-content {
+  padding: 1rem;
+  display: none;
+}
+
+#tabs-with-content .tab-content.is-active {
+  display: block;
+}
+
+.content h5 {
+  margin-bottom: 0.5em;
+  margin-top: 2.5em;
+}
+a.navbar-item.active, a.navbar-item:hover {
+  background-color: #f9f9f9;
+  color: $primary;
+}
+.tabs ul {
+  padding: 0;
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  #tabs-with-content.tabs {
+    font-size: 1rem;
+  }
+  .hero.is-primary .title {
+    padding-top: 1.5em;
+  }
+}
+@media screen and (min-width: 769px), print {
+  .hero.is-medium .hero-body {
+      padding-bottom: 6rem;
+  }
+}
